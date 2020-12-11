@@ -30,21 +30,22 @@ namespace MedicalRepresentativeSchedule.repositories
 
             representatives = new List<RepresentativeDetails>()
             {
-                new RepresentativeDetails{Representative_Name=new List<string>() { "r1", "r2", "r3" }},
+                new RepresentativeDetails{Representative_Name= "r1" },
+                new RepresentativeDetails{Representative_Name= "r2" },
+                new RepresentativeDetails{Representative_Name= "r3" }
             };
 
 
         }
-
-
-        public List<RepSchedule> GetSchedule(List<MedicineStock> medicines)
+        public List<Doctor> GetDoctorDetails()
         {
-
-           
-            List<RepSchedule> finalschedule;
-           
-            
+            return doctors;
         }
+        public List<RepresentativeDetails> GetRepresentativesDetails()
+        {
+            return representatives;
+        }
+
     }
         
     

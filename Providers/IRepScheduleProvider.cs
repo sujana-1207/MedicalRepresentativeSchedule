@@ -9,7 +9,7 @@ namespace MedicalRepresentativeSchedule.Providers
 {
     public interface IRepScheduleProvider
     {
-        [HttpGet]
         public  Task<List<RepSchedule>> GetRepScheduleAsync(DateTime startdate);
+
     }
 }

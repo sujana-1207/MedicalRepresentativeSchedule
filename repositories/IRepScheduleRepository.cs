@@ -8,6 +8,7 @@ namespace MedicalRepresentativeSchedule.repositories
 {
     public interface IRepScheduleRepository
     {
-        List<RepSchedule> GetSchedule(List<MedicineStock> medicines);
+        public List<Doctor> GetDoctorDetails();
+        public List<RepresentativeDetails> GetRepresentativesDetails();
     }
 }

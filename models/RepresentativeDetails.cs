@@ -7,7 +7,7 @@ namespace MedicalRepresentativeSchedule.models
 {
     public class RepresentativeDetails
     {
-        public List<string> Representative_Name { get; set; }
+        public string Representative_Name { get; set; }
 
     }
 }

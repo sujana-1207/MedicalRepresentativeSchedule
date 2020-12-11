@@ -29,14 +29,11 @@ namespace MedicalRepresentativeSchedule.Controllers
 
 
         [HttpGet]
-        [Route("RepScheduleController/{startdate}")]
-        public IActionResult Get(DateTime startdate)
+        public async Task<IActionResult> Get(DateTime startdate)
         {
-
-            BasicConfigurator.Configure();
-
+            var res = await irepschedule.GetRepScheduleAsync(startdate);
             log.Info("returning schedule");
-            return Ok(irepschedule.GetRepScheduleAsync(startdate));
+            return new OkObjectResult(res);
         }
 
 
